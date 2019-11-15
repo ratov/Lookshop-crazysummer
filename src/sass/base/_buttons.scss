@@ -1,0 +1,27 @@
+.button {
+  width: 156px;
+  height: 55px;
+  background-color: $accent;
+  border: none;
+  font-family: 'HelveticaThin';
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 24px;
+  border-bottom: 4px solid #dd6b44;
+  transition: all .4s ease;
+  span {
+    padding-right: 13px;
+    img {
+      display: block;
+      width: 9px;
+      height: 9px;
+    }    
+  }
+  &:hover {
+    background-color: darken($accent, 30);
+  }
+}
