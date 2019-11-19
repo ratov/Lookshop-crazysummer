@@ -36,13 +36,24 @@ $(document).ready(function(){
     $slick.slick({
         draggable: true,
         adaptiveHeight: false,
+        infinite: true,
         dots: true,
         mobileFirst: true,
         pauseOnDotsHover: true,
         //fade: true,
-        mobileFirst: true,
         prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>',
         nextArrow: '<button type="button" class="slick-next"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>',
+        responsive: [
+          {
+            breakpoint: 2000,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true
+            }
+          },
+        ]
     });
 
     $bar = $('.slider-progress .progress');

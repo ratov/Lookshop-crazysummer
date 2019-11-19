@@ -18,6 +18,12 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 9;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    i {
+      font-size: 30px;
+      color: #CBCBCA;
+    }
   }
   
   .slick-next {    
@@ -35,23 +41,34 @@
   }
   
   #slick-1 .slick-dots li {
-    width: 40px;
-    height: 5px;
-    background: #ccc;
+    display: flex;
+    align-items: center;
   }
-  #slick-1 .slick-dots li button {
-    width: 40px;
-    height: 5px;
+
+  .slick-dots {
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -32px;
+    li.slick-active button {
+      background-color: $accent;
+      opacity: 1;
+    }
+    button {
+      font-size: 0;
+      width: 11px;
+      height: 11px;
+      border-radius: 100%;
+      border: none;
+      background-color: #867A76;
+      margin: 0 10px;
+    }
   }
-  // #slick-1 .slick-dots li.slick-active,
-  // #slick-1 .slick-dots li:hover {
-  //   background: #777;
-  // }
-  // #slick-1 .slick-dots li button, 
-  // #slick-1 .slick-dots li button:before {
-  //   color: transparent;
-  //   opacity: 0;
-  // }
 
   
   /* progress bar */
@@ -60,7 +77,7 @@
     height: 10px;
     background: transparent;
     position: absolute;
-    bottom: 0;
+    bottom: 2px;
   }
   .slider-progress .progress {
     width: 0%;
